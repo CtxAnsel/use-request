@@ -1,70 +1,26 @@
-# Getting Started with Create React App
+## useRequest
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+- useRequest是一个强大的异步数据管理的 Hooks，React 项目中的网络请求场景使用 useRequest 就够了
+- useRequest 通过插件式组织代码，核心代码极其简单，并且可以很方便的扩展出更高级的功能。目前已有能力包括：
+  - 自动请求/手动请求
+  - 轮询
+  - 防抖
+  - 节流
+  - 屏幕聚焦重新请求
+  - 错误重试
+  - loading delay
+  - SWR(stale-while-revalidate)重新请求的同时使用过期数据
+  - 缓存
 
-## Available Scripts
+### 依赖Hooks
 
-In the project directory, you can run:
+- useRequest是一个强大的异步数据管理的 Hooks，React项目中的网络请求场景使用 useRequest 就够了
+- useUpdateEffect用法等同于 useEffect，但是会忽略首次执行，只在依赖更新时执行
+- useCreation 是 useMemo 或 useRef 的替代品
+- useLatest返回当前最新值的 Hook，可以避免闭包问题
+- useMemoizedFn是持久化 function 的 Hook，理论上，可以使用 useMemoizedFn 完全代替 useCallback
+- useMount是只在组件初始化时执行的 Hook
+- useUnmount是在组件卸载（unmount）时执行的 Hook。
+- useUpdate会返回一个函数，调用该函数会强制组件重新渲染
 
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 

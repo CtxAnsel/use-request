@@ -1,25 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import { useRequest } from './ahooks';
+import React from 'react';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+function getName() {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve('zhufeng');
+    }, 1000);
+  });
 }
 
+function App() {
+  const { data, loading } = useRequest(getName);
+  if (loading) {
+    return <div>加载中...</div>;
+  }
+  return <div>用户名: {data}</div>;
+};
 export default App;
